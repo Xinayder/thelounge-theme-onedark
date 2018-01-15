@@ -10,6 +10,7 @@ Author: Alexandre Oliveira
 GitHub: https://github.com/RockyTV
 */
 
+
 /* irc colors
  * 0, white: #fff;
  * 1, black: #1e2127;
@@ -29,7 +30,7 @@ GitHub: https://github.com/RockyTV
  * 16, light grey: #abb2bf;
  */
 
- body {
+body {
 	background: #1a1c21;
 	color: #abb2bf;
 }
@@ -42,7 +43,7 @@ GitHub: https://github.com/RockyTV
 }
 
 #windows .window::before {
-    display: none;
+	display: none;
 }
 
 #settings,
@@ -59,23 +60,24 @@ GitHub: https://github.com/RockyTV
 
 #settings a:hover,
 #settings a:focus,
-a:hover, 
+a:hover,
 a:focus {
-    color: #589DD6; /* blue with 84% brightness */
+	color: #589DD6;
+	/* blue with 84% brightness */
 }
 
 #settings a,
 .btn {
-    color: #61afef;
+	color: #61afef;
 }
 
 .btn {
-    border-color: #61afef;
+	border-color: #61afef;
 }
 
 .btn:hover {
-    background: #61afef;
-    color: #fff;
+	background: #61afef;
+	color: #fff;
 }
 
 #sidebar {
@@ -83,30 +85,33 @@ a:focus {
 }
 
 #sidebar .chan:first-child {
-    color: #589dd6; /* blue with 84% brightness */
+	color: #589dd6;
+	/* blue with 84% brightness */
 }
 
 #sidebar .chan:first-child:hover,
 #sidebar .chan:first-child.active {
-    color: #61afef;
+	color: #61afef;
 }
 
 #sidebar button,
 #sidebar .chan,
 #sidebar .sign-out,
 #sidebar .empty {
-    color: #abb2bf;
+	color: #abb2bf;
 }
 
 #sidebar button:hover,
 #sidebar .chan:hover,
 #sidebar .active {
-    color: #CFD7E6; /* light-grey with 90% brightness */
+	color: #CFD7E6;
+	/* light-grey with 90% brightness */
 }
 
 #sidebar .badge {
-    background-color: #1a1c21; /* background with 13% brightness */
-    color: #abb2bf;
+	background-color: #1a1c21;
+	/* background with 13% brightness */
+	color: #abb2bf;
 }
 
 #sidebar .chan .name::after {
@@ -114,13 +119,14 @@ a:focus {
 }
 
 #footer {
-	background: #1A1C21; /* background with 13% brightness */
+	background: #1A1C21;
+	/* background with 13% brightness */
 	border-top: 1px solid #1a1c21;
 }
 
 #chat .count {
-    background-color: #1e2127;
-    color: #abb2bf;
+	background-color: #1e2127;
+	color: #abb2bf;
 }
 
 #chat .search {
@@ -128,7 +134,9 @@ a:focus {
 	padding: 15px 16px;
 }
 
+
 /* Borders */
+
 #chat .from,
 #windows .header,
 #chat .user-mode::before,
@@ -136,103 +144,176 @@ a:focus {
 	border-color: #1a1c21;
 }
 
+
 /* Topic */
+
 #windows .header {
-    background: #1a1c21;
+	background: #1a1c21;
 }
 
 #windows .header .title,
 #windows .header .topic {
-    color: #959BA6;
+	color: #959BA6;
 }
 
+
 /* User list */
+
 #chat .user-mode+.user-mode {
 	padding-top: 1rem;
 }
 
 #chat .user-mode::before {
-    display: none;
+	display: none;
 }
 
+
 /* Nicknames */
+
 #chat .user {
 	color: #c678dd;
 }
 
+
 /* light-red */
+
 #chat.colored-nicks .user.color-1,
-#chat.colored-nicks .user.color-17 { color: #E06C75; }
+#chat.colored-nicks .user.color-17 {
+	color: #E06C75;
+}
+
 
 /* purple */
+
 #chat.colored-nicks .user.color-2,
-#chat.colored-nicks .user.color-18 { color: #C678DD; }
+#chat.colored-nicks .user.color-18 {
+	color: #C678DD;
+}
+
 
 /* orange */
+
 #chat.colored-nicks .user.color-3,
-#chat.colored-nicks .user.color-19 { color: #d19a66; }
+#chat.colored-nicks .user.color-19 {
+	color: #d19a66;
+}
+
 
 /* yellow */
+
 #chat.colored-nicks .user.color-4,
-#chat.colored-nicks .user.color-20 { color: #d19a66; }
+#chat.colored-nicks .user.color-20 {
+	color: #d19a66;
+}
+
 
 /* also yellow */
+
 #chat.colored-nicks .user.color-5,
-#chat.colored-nicks .user.color-21 { color: #d19a66; }
+#chat.colored-nicks .user.color-21 {
+	color: #d19a66;
+}
+
 
 /* also orange */
+
 #chat.colored-nicks .user.color-6,
-#chat.colored-nicks .user.color-22 { color: #d19a66; }
+#chat.colored-nicks .user.color-22 {
+	color: #d19a66;
+}
+
 
 /* green */
+
 #chat.colored-nicks .user.color-7,
-#chat.colored-nicks .user.color-23 { color: #98c379; }
+#chat.colored-nicks .user.color-23 {
+	color: #98c379;
+}
+
 
 /* light-green */
+
 #chat.colored-nicks .user.color-8,
-#chat.colored-nicks .user.color-24 { color: #98c379; }
+#chat.colored-nicks .user.color-24 {
+	color: #98c379;
+}
+
 
 /* cyan */
+
 #chat.colored-nicks .user.color-9,
-#chat.colored-nicks .user.color-25 { color: #56b6c2; }
+#chat.colored-nicks .user.color-25 {
+	color: #56b6c2;
+}
+
 
 /* light-cyan */
+
 #chat.colored-nicks .user.color-10,
-#chat.colored-nicks .user.color-26 { color: #56b6c2; }
+#chat.colored-nicks .user.color-26 {
+	color: #56b6c2;
+}
+
 
 /* blue */
+
 #chat.colored-nicks .user.color-11,
-#chat.colored-nicks .user.color-27 { color: #61afef; }
+#chat.colored-nicks .user.color-27 {
+	color: #61afef;
+}
+
 
 /* light-blue */
+
 #chat.colored-nicks .user.color-12,
-#chat.colored-nicks .user.color-28 { color: #61afef; }
+#chat.colored-nicks .user.color-28 {
+	color: #61afef;
+}
+
 
 /* purple */
+
 #chat.colored-nicks .user.color-13,
-#chat.colored-nicks .user.color-29 { color: #c678dd; }
+#chat.colored-nicks .user.color-29 {
+	color: #c678dd;
+}
+
 
 /* pink */
+
 #chat.colored-nicks .user.color-14,
-#chat.colored-nicks .user.color-30 { color: #c678dd }
+#chat.colored-nicks .user.color-30 {
+	color: #c678dd
+}
+
 
 /* another orange */
+
 #chat.colored-nicks .user.color-15,
-#chat.colored-nicks .user.color-31 { color: #d19a66; }
+#chat.colored-nicks .user.color-31 {
+	color: #d19a66;
+}
+
 
 /* another also orange */
+
 #chat.colored-nicks .user.color-16,
-#chat.colored-nicks .user.color-32 { color: #d19a66; }
+#chat.colored-nicks .user.color-32 {
+	color: #d19a66;
+}
 
 #chat a {
 	color: #61afef;
 }
 
+
 /* Message form */
+
 #form {
 	background: #1A1C21;
-    border-color: #1A1C21; /* background with 13% brightness */
-    padding-top: 6px;
+	border-color: #1A1C21;
+	/* background with 13% brightness */
+	padding-top: 6px;
 }
 
 #windows #form .input {
@@ -242,7 +323,8 @@ a:focus {
 }
 
 #form #nick {
-	background: #1A1C21; /* background with 13% brightness */
+	background: #1A1C21;
+	/* background with 13% brightness */
 	color: #abb2bf;
 }
 
@@ -250,46 +332,58 @@ a:focus {
 	opacity: 1;
 }
 
+
 /* Buttons */
+
 #chat .show-more-button {
-	background: #1a1c21; /* background with 13% brightness */
-	border-color: #1A1C21; /* background with 13% brightness */
+	background: #1a1c21;
+	/* background with 13% brightness */
+	border-color: #1A1C21;
+	/* background with 13% brightness */
 	color: #abb2bf;
 }
 
 #chat .show-more-button:hover {
-    /*color: #fff;*/
-    background: #1e2127;
+	/*color: #fff;*/
+	background: #1e2127;
 }
 
 #chat .header {
 	color: #5c6370;
 }
 
+
 /* Notification dot on the top right corner of the menu icon */
+
 #viewport .lt::after {
 	border-color: #1e2127;
 }
 
 #chat .unread-marker::before {
-    border-color: #FA7883; /* red with 98% brightness */
+	border-color: #FA7883;
+	/* red with 98% brightness */
 }
 
 #chat .unread-marker-text::before {
-    background-color: #1e2127;
-    color: #FA7883; /* red with 98% brightness */
+	background-color: #1e2127;
+	color: #FA7883;
+	/* red with 98% brightness */
 }
 
 #chat .date-marker::before {
-	border-color: #98c739; /* green with 88% brightness */
+	border-color: #98c739;
+	/* green with 88% brightness */
 }
 
 #chat .date-marker-text::before {
 	background-color: #1e2127;
-	color: #98c739; /* green with 88% brightness */
+	color: #98c739;
+	/* green with 88% brightness */
 }
 
+
 /* Setup text colors */
+
 #chat .msg {
 	color: #abb2bf;
 }
@@ -299,7 +393,8 @@ a:focus {
 }
 
 #chat .self .text {
-	color: #C3CBD9; /* fg color, brightness to 85% */
+	color: #C3CBD9;
+	/* fg color, brightness to 85% */
 }
 
 #chat .error,
@@ -307,7 +402,8 @@ a:focus {
 #chat .channel .highlight,
 #chat .channel .highlight .from,
 #chat .channel .highlight .text {
-	color: #B8875A; /* orange with 72% brightness */
+	color: #B8875A;
+	/* orange with 72% brightness */
 }
 
 #chat .unhandled .from {
@@ -332,6 +428,7 @@ a:focus {
 	color: #ccc;
 }
 
+
 /* Previews */
 
 #chat .toggle-content {
@@ -342,6 +439,7 @@ a:focus {
 #chat .toggle-content .body {
 	color: #5c6370;
 }
+
 
 /* Form elements */
 
@@ -357,6 +455,7 @@ a:focus {
 	color: rgba(170, 177, 191, 0.6);
 }
 
+
 /* End form elements */
 
 @media (min-width: 480px) {
@@ -365,37 +464,45 @@ a:focus {
 	}
 }
 
+
 /* Modifications */
+
+
 /* <nick> */
+
 .messages .from .user::before {
-    color: #5c6370;
-    opacity: .3;
-    content: "<";
+	color: #5c6370;
+	opacity: .3;
+	content: "<";
 }
 
 .messages .from .user::after {
-    color: #5c6370;
-    opacity: .3;
-    content: ">";
+	color: #5c6370;
+	opacity: .3;
+	content: ">";
 }
 
+
 /* correct color for icons */
+
 #chat .invite .from::before,
 #chat .topic .from::before,
 #chat .mode .from::before,
 #chat .whois .from::before,
 #chat .nick .from::before,
 #chat .join .from::before {
-    color: #98c739;
+	color: #98c739;
 }
 
 #chat .quit .from::before,
 #chat .part .from::before,
 #chat .kick .from::before {
-    color: #E06C75;
+	color: #E06C75;
 }
 
+
 /* Condensed status messages */
+
 #chat .condensed .content,
 #chat .away .content,
 #chat .back .content,
@@ -407,30 +514,35 @@ a:focus {
 #chat .quit .content,
 #chat .topic .content,
 #chat .topic_set_by .content {
-    color: #808897;
+	color: #808897;
 }
 
+
 /* Actions */
+
 #chat .action .from,
 #chat .action .text,
 #chat .action .user {
 	color: #B8875A;
 }
 
+
 /* Notices */
+
 #chat .notice .time,
 #chat .notice .text,
 #chat .chan .notice .user {
-    color: #589DD6 !important;
+	color: #589DD6 !important;
 }
 
 #chat .notice .user::before {
-    color: #5c6370;
-    opacity: .3;
-    content: "\2013";
+	color: #5c6370;
+	opacity: .3;
+	content: "\2013";
 }
-#chat .notice .user::after{
-    color: #5c6370;
-    opacity: .3;
-    content: "\2013";
+
+#chat .notice .user::after {
+	color: #5c6370;
+	opacity: .3;
+	content: "\2013";
 }
