@@ -720,3 +720,22 @@ a:focus {
 .textcomplete-item a {
 	color: #abb2bf;
 }
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+	background-color: rgba(20, 22, 26, 0);
+}
+
+::-webkit-scrollbar:hover {
+	background-color: rgba(20, 22, 26, 0.3);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	background: rgba(20, 22, 26, 0.5);
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+	background: rgba(20, 22, 26, 0.6);
+}
