@@ -279,8 +279,13 @@ a:focus {
 	border-color: #1e2127;
 }
 
+#chat .unread-marker::before {
+    border-color: #FA7883; /* red with 98% brightness */
+}
+
 #chat .unread-marker-text::before {
-	background-color: #1e2127;
+    background-color: #1e2127;
+    color: #FA7883; /* red with 98% brightness */
 }
 
 #chat .date-marker::before {
