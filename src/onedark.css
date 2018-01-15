@@ -95,7 +95,7 @@ a:focus {
 }
 
 #sidebar .chan:first-child:hover,
-#sidebar .chan:first-child:active {
+#sidebar .chan:first-child.active {
     color: #61afef;
 }
 
