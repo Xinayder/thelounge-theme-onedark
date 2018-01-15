@@ -694,3 +694,28 @@ a:focus {
 	opacity: .3;
 	content: "\2013";
 }
+
+
+/* Context Menu */
+
+#context-menu,
+.textcomplete-menu {
+	background-color: #1a1c21;
+}
+
+.context-menu-item:hover,
+.textcomplete-item:hover,
+.textcomplete-menu .active {
+	background-color: #1e2127;
+	color: #589dd6 !important;
+}
+
+.textcomplete-menu .active a {
+	color: #589dd6;
+}
+
+.context-menu-item,
+.textcomplete-item,
+.textcomplete-item a {
+	color: #abb2bf;
+}
