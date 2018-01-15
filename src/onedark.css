@@ -370,3 +370,33 @@ a:focus {
 		background: linear-gradient(to right, rgba(30, 33, 39, 0.5) 0%, rgba(30, 33, 39, 1) 100%);
 	}
 }
+
+/* Modifications */
+/* <nick> */
+.messages .from .user::before {
+    color: #5c6370;
+    opacity: .3;
+    content: "<";
+}
+
+.messages .from .user::after {
+    color: #5c6370;
+    opacity: .3;
+    content: ">";
+}
+
+/* correct color for icons */
+#chat .invite .from::before,
+#chat .topic .from::before,
+#chat .mode .from::before,
+#chat .whois .from::before,
+#chat .nick .from::before,
+#chat .join .from::before {
+    color: #98c739;
+}
+
+#chat .quit .from::before,
+#chat .part .from::before,
+#chat .kick .from::before {
+    color: #E06C75;
+}
