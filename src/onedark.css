@@ -681,7 +681,7 @@ a:focus {
 #chat .notice .time,
 #chat .notice .text,
 #chat .chan .notice .user {
-	color: #589DD6 !important;
+	color: #d4666f !important;
 }
 
 #chat .notice .user::before {
