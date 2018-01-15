@@ -112,6 +112,11 @@ a:focus {
     color: #CFD7E6; /* light-grey with 90% brightness */
 }
 
+#sidebar .badge {
+    background-color: #1a1c21; /* background with 13% brightness */
+    color: #abb2bf;
+}
+
 #sidebar .chan .name::after {
 	background: linear-gradient(to right, rgba(30, 33, 39, 0) 0%, rgba(30, 33, 39, 1) 100%);
 }
