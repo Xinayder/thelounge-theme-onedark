@@ -354,18 +354,15 @@ a:focus {
 /* Form elements */
 
 #chat-container ::-moz-placeholder {
-	color: #5c6370;
-	opacity: 0.5;
+	color: rgba(170, 177, 191, 0.6);
 }
 
 #chat-container ::-webkit-input-placeholder {
-	color: #5c6370;
-	opacity: 0.5;
+	color: rgba(170, 177, 191, 0.6);
 }
 
 #chat-container :-ms-input-placeholder {
-	color: #5c6370;
-	opacity: 0.5;
+	color: rgba(170, 177, 191, 0.6);
 }
 
 /* End form elements */
@@ -418,7 +415,7 @@ a:focus {
 #chat .quit .content,
 #chat .topic .content,
 #chat .topic_set_by .content {
-    color: #5c6370;
+    color: #808897;
 }
 
 /* Actions */
