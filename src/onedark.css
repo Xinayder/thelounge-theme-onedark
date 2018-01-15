@@ -197,7 +197,7 @@ body {
 #settings,
 #sign-in,
 #connect .title {
-	color: #61afef;
+	color: #98c739;
 }
 
 #settings,
@@ -206,8 +206,6 @@ body {
 	color: #abb2bf;
 }
 
-#settings a:hover,
-#settings a:focus,
 a:hover,
 a:focus {
 	color: #589DD6;
@@ -216,30 +214,33 @@ a:focus {
 
 #settings a,
 .btn {
-	color: #61afef;
+	color: #98c739;
 }
 
 .btn {
-	border-color: #61afef;
+	border-color: #98c739;
 }
 
 .btn:hover {
-	background: #61afef;
-	color: #fff;
+	background: #98c739;
+	color: #434852;
+	/* grey with 32% brightness */
 }
 
 #sidebar {
 	background: #1e2127;
 }
 
+#settings a:hover,
+#settings a:focus,
 #sidebar .chan:first-child {
-	color: #589dd6;
-	/* blue with 84% brightness */
+	color: #84AD32;
+	/* green with 84% brightness */
 }
 
 #sidebar .chan:first-child:hover,
 #sidebar .chan:first-child.active {
-	color: #61afef;
+	color: #98c739;
 }
 
 #sidebar button,
@@ -278,7 +279,7 @@ a:focus {
 }
 
 #chat .search {
-	color: #61afef;
+	color: #98c739;
 	padding: 15px 16px;
 }
 
@@ -707,11 +708,11 @@ a:focus {
 .textcomplete-item:hover,
 .textcomplete-menu .active {
 	background-color: #1e2127;
-	color: #589dd6 !important;
+	color: #98c739 !important;
 }
 
 .textcomplete-menu .active a {
-	color: #589dd6;
+	color: #98c739;
 }
 
 .context-menu-item,
