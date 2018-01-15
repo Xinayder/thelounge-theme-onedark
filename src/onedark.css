@@ -30,6 +30,154 @@ GitHub: https://github.com/RockyTV
  * 16, light grey: #abb2bf;
  */
 
+.irc-fg0 {
+	color: #fff;
+}
+
+.irc-fg1 {
+	color: #0C0D0F;
+	/* black with 6% brightness */
+}
+
+.irc-fg2 {
+	color: #4F8EC2;
+	/* blue with 76% brightness */
+}
+
+.irc-fg3 {
+	color: #81A667;
+	/* green with 65% brightness */
+}
+
+.irc-fg4 {
+	color: #FF7A85;
+	/* red with 100% brightness */
+}
+
+.irc-fg5 {
+	color: #d4666f;
+	/* red with 83% brightness */
+}
+
+.irc-fg6 {
+	color: #c678dd;
+}
+
+.irc-fg7 {
+	color: #d19a66;
+}
+
+.irc-fg8 {
+	color: #D1BC66;
+}
+
+.irc-fg9 {
+	color: #98c379;
+}
+
+.irc-fg10 {
+	color: #4A9DA8;
+	/* cyan with 66% brightness */
+}
+
+.irc-fg11 {
+	color: #56b6c2;
+}
+
+.irc-fg12 {
+	color: #5AA1DB;
+	/* blue with 86% brightness */
+}
+
+.irc-fg13 {
+	color: #E48AFF;
+	/* purple with 100% brightness */
+}
+
+.irc-fg14 {
+	color: #808A9C;
+	/* grey with 61% brightness */
+}
+
+.irc-fg15 {
+	color: #C3CBD9;
+	/* light grey with 85% brightness */
+}
+
+.irc-bg0 {
+	background: #fff;
+}
+
+.irc-bg1 {
+	background: #0C0D0F;
+	/* black with 6% brightness */
+}
+
+.irc-bg2 {
+	background: #4F8EC2;
+	/* blue with 76% brightness */
+}
+
+.irc-bg3 {
+	background: #81A667;
+	/* green with 65% brightness */
+}
+
+.irc-bg4 {
+	background: #FF7A85;
+	/* red with 100% brightness */
+}
+
+.irc-bg5 {
+	background: #d4666f;
+	/* red with 83% brightness */
+}
+
+.irc-bg6 {
+	background: #c678dd;
+}
+
+.irc-bg7 {
+	background: #d19a66;
+}
+
+.irc-bg8 {
+	background: #D1BC66;
+}
+
+.irc-bg9 {
+	background: #98c379;
+}
+
+.irc-bg10 {
+	background: #4A9DA8;
+	/* cyan with 66% brightness */
+}
+
+.irc-bg11 {
+	background: #56b6c2;
+}
+
+.irc-bg12 {
+	background: #5AA1DB;
+	/* blue with 86% brightness */
+}
+
+.irc-bg13 {
+	background: #E48AFF;
+	/* purple with 100% brightness */
+}
+
+.irc-bg14 {
+	background: #808A9C;
+	/* grey with 61% brightness */
+}
+
+.irc-bg15 {
+	background: #C3CBD9;
+	/* light grey with 85% brightness */
+}
+
 body {
 	background: #1a1c21;
 	color: #abb2bf;
