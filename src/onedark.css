@@ -400,3 +400,43 @@ a:focus {
 #chat .kick .from::before {
     color: #E06C75;
 }
+
+/* Condensed status messages */
+#chat .condensed .content,
+#chat .away .content,
+#chat .back .content,
+#chat .join .content,
+#chat .kick .content,
+#chat .mode .content,
+#chat .nick .content,
+#chat .part .content,
+#chat .quit .content,
+#chat .topic .content,
+#chat .topic_set_by .content {
+    color: #5c6370;
+}
+
+/* Actions */
+#chat .action .from,
+#chat .action .text,
+#chat .action .user {
+	color: #B8875A;
+}
+
+/* Notices */
+#chat .notice .time,
+#chat .notice .text,
+#chat .chan .notice .user {
+    color: #589DD6 !important;
+}
+
+#chat .notice .user::before {
+    color: #5c6370;
+    opacity: .3;
+    content: "\2013";
+}
+#chat .notice .user::after{
+    color: #5c6370;
+    opacity: .3;
+    content: "\2013";
+}
