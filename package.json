@@ -1,0 +1,25 @@
+{
+  "name": "thelounge-theme-onedark",
+  "version": "0.1.0",
+  "description": "One Dark theme for The Lounge",
+  "main": "package.json",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RockyTV/lounge-onedark.git"
+  },
+  "keywords": [
+    "thelounge",
+    "thelounge-theme"
+  ],
+  "author": "Alexandre Oliveira <rockytvbr@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RockyTV/lounge-onedark/issues"
+  },
+  "homepage": "https://github.com/RockyTV/lounge-onedark#readme",
+  "thelounge": {
+    "css": "src/onedark.css",
+    "name": "One Dark",
+    "type": "theme"
+  }
+}
