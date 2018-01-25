@@ -255,16 +255,23 @@ a:focus {
 #sidebar .active {
 	color: #CFD7E6;
 	/* light-grey with 90% brightness */
+	background-color: #1a1c21;
+	/* background with 13% brightness */
 }
 
 #sidebar .badge {
-	background-color: #1a1c21;
-	/* background with 13% brightness */
+	background-color: #272B33;
+	/* background with 20% brightness */
 	color: #abb2bf;
 }
 
 #sidebar .chan .name::after {
 	background: linear-gradient(to right, rgba(30, 33, 39, 0) 0%, rgba(30, 33, 39, 1) 100%);
+}
+
+#sidebar .chan:hover .name::after,
+#sidebar .chan.active .name::after {
+	background: linear-gradient(to right, rgba(26, 28, 33, 0) 0%, rgba(26, 28, 33, 1) 100%);
 }
 
 #footer {
