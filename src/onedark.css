@@ -739,3 +739,10 @@ a:focus {
 ::-webkit-scrollbar-thumb:vertical:active {
 	background: rgba(20, 22, 26, 0.6);
 }
+
+
+/* Font size */
+
+.messages .msg {
+	font-size: 13px;
+}
