@@ -255,13 +255,22 @@ a:focus {
 	color: #abb2bf;
 }
 
-#sidebar button:hover,
 #sidebar .chan:hover,
 #sidebar .active {
 	color: #CFD7E6;
 	/* light-grey with 90% brightness */
 	background-color: #1a1c21;
 	/* background with 13% brightness */
+}
+
+#sidebar button:hover,
+#sidebar .chan.active .close:hover {
+	color: #cfd7e6;
+	background-color: #1a1c21;
+}
+
+#sidebar .close {
+	border-radius: 0;
 }
 
 #sidebar .badge {
@@ -1541,4 +1550,24 @@ a:focus {
 
 .irc-bg98 {
 	background-color: #fff;
+}
+
+
+/* Correct alignment for sidebar icons */
+
+#sidebar .chan::before,
+#sidebar .close::before {
+	vertical-align: middle;
+}
+
+#sidebar .chan:first-child::before {
+	line-height: 24px;
+}
+
+
+/* Adjust form input size */
+
+#form #input {
+	min-height: 18px;
+	height: 18px;
 }
