@@ -572,8 +572,7 @@ a:focus {
 #chat .channel .highlight,
 #chat .channel .highlight .from,
 #chat .channel .highlight .text {
-	color: #B8875A;
-	/* orange with 72% brightness */
+	color: #d7656e;
 }
 
 #chat .unhandled .from {
@@ -1570,4 +1569,12 @@ a:focus {
 #form #input {
 	min-height: 18px;
 	height: 18px;
+}
+
+
+/* Highlight badge color */
+
+#sidebar .badge.highlight {
+	background: #98c739;
+	color: #1e2127;
 }
