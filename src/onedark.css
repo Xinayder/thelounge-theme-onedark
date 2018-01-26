@@ -629,21 +629,6 @@ a:focus {
 /* Modifications */
 
 
-/* <nick> */
-
-.messages .from .user::before {
-	color: #5c6370;
-	opacity: .3;
-	content: "<";
-}
-
-.messages .from .user::after {
-	color: #5c6370;
-	opacity: .3;
-	content: ">";
-}
-
-
 /* correct color for icons */
 
 #chat .invite .from::before,
