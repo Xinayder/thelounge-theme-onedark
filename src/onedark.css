@@ -30,7 +30,7 @@ GitHub: https://github.com/RockyTV
  * 16, light grey: #abb2bf;
  */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans:400,700');
 body {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -218,6 +218,8 @@ a:focus {
 }
 
 #settings a,
+#help a,
+#changelog a,
 .btn {
 	color: #98c739;
 }
@@ -233,40 +235,55 @@ a:focus {
 }
 
 #sidebar {
-	background: #1e2127;
+	background: #1a1c21;
 }
 
 #settings a:hover,
 #settings a:focus,
+#help a:hover,
+#help a:focus,
+#changelog a:hover,
+#changelog a:focus,
 #sidebar .chan:first-child {
 	color: #84AD32;
 	/* green with 84% brightness */
 }
 
-#sidebar .chan:first-child:hover,
-#sidebar .chan:first-child.active {
+#sidebar .chan.lobby.active,
+#sidebar .chan.lobby .lobby-wrap:hover {
 	color: #98c739;
+}
+
+#sidebar .chan.lobby.badge {
+	margin-right: 1px;
 }
 
 #sidebar button,
 #sidebar .chan,
 #sidebar .sign-out,
-#sidebar .empty {
-	color: #abb2bf;
+#sidebar .empty,
+#sidebar .leave::before,
+#sidebar .close::before,
+#sidebar .lobby .add-channel::before,
+#sidebar .network .collapse-network-icon::before {
+	color: #C3CBD9;
 }
 
 #sidebar .chan:hover,
 #sidebar .active {
 	color: #CFD7E6;
 	/* light-grey with 90% brightness */
-	background-color: #1a1c21;
+	background-color: #21242b;
 	/* background with 13% brightness */
 }
 
 #sidebar button:hover,
-#sidebar .chan.active .close:hover {
+#sidebar .leave::before:hover,
+#sidebar .close::before:hover,
+#sidebar .chan.active .close:hover,
+#sidebar .lobby .add-channel::before:hover,
+#sidebar .network .collapse-network-icon::before:hover {
 	color: #cfd7e6;
-	background-color: #1a1c21;
 }
 
 #sidebar .close {
@@ -280,12 +297,12 @@ a:focus {
 }
 
 #sidebar .chan .name::after {
-	background: linear-gradient(to right, rgba(30, 33, 39, 0) 0%, rgba(30, 33, 39, 1) 100%);
+	background: linear-gradient(to right, rgba(26, 28, 33, 0) 0%, rgba(26, 28, 33, 1) 100%);
 }
 
 #sidebar .chan:hover .name::after,
 #sidebar .chan.active .name::after {
-	background: linear-gradient(to right, rgba(26, 28, 33, 0) 0%, rgba(26, 28, 33, 1) 100%);
+	background: linear-gradient(to right, rgba(33, 36, 43, 0) 0%, rgba(33, 36, 43 ,1) 100%);
 }
 
 #footer {
@@ -294,6 +311,17 @@ a:focus {
 	border-top: 1px solid #1a1c21;
 }
 
+/* Footer icon */
+#footer .icon {
+	color: rgba(171, 178, 191, .8);
+}
+
+#footer .icon:hover,
+#footer .icon.active {
+	color: #cfd7e6;
+}
+
+/* User list */
 #chat .count {
 	background-color: #1e2127;
 	color: #abb2bf;
@@ -304,12 +332,36 @@ a:focus {
 	padding: 15px 16px;
 }
 
+#chat .userlist {
+	background: inherit;
+	border-color: #1a1c21;
+}
+
+#chat .userlist .count::before {
+	color: inherit;
+}
+
+#chat .userlist .count {
+	color: #abb2bf;
+	background-color: inherit;
+}
+
+#chat .userlist .count .search {
+	color: #98c739;
+	background: inherit;
+	border-color: inherit;
+}
+
+#chat .userlist .user.active {
+	background: #1a1c21;
+}
 
 /* Borders */
 
 #chat .from,
 #windows .header,
 #chat .user-mode::before,
+#chat .content,
 #chat .sidebar {
 	border-color: #1a1c21;
 }
@@ -493,6 +545,7 @@ a:focus {
 }
 
 #form #nick {
+	display: none;
 	background: #1A1C21;
 	/* background with 13% brightness */
 	color: #abb2bf;
@@ -506,16 +559,32 @@ a:focus {
 /* Buttons */
 
 #chat .show-more-button {
-	background: #1a1c21;
+	background: #1e2127;
 	/* background with 13% brightness */
-	border-color: #1A1C21;
+	border: 2px solid #98c739;
+	border-radius: 3px;
+	border-color: #98c739;
 	/* background with 13% brightness */
-	color: #abb2bf;
+	color: #98c739;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 #chat .show-more-button:hover {
 	/*color: #fff;*/
-	background: #1e2127;
+	background: #98c739;
+	color: #1e2127;
+}
+
+#chat .show-more-button[disabled=""] {
+	border: none;
+	color: #abb2bf;
+}
+
+#chat .show-more-button[disabled=""]:hover {
+	background: inherit;
+	border: none;
+	color: #abb2bf;
 }
 
 #chat .header {
@@ -562,7 +631,8 @@ a:focus {
 	color: #abb2bf;
 }
 
-#chat .self .text {
+#chat .self .text,
+#chat .msg.channel_list_loading .text {
 	color: #C3CBD9;
 	/* fg color, brightness to 85% */
 }
@@ -576,7 +646,7 @@ a:focus {
 }
 
 #chat .unhandled .from {
-	color: #aaa;
+	color: #abb2bf;
 }
 
 #chat .msg.quit .time,
@@ -594,8 +664,28 @@ a:focus {
 }
 
 #chat table.channel-list td {
-	color: #ccc;
+	color: #abb2bf;
 }
+
+#chat table.channel-list th,
+#chat table.ban-list th,
+#chat table.channel-list td,
+#chat table.ban-list td {
+	border-bottom-color: #1a1c21;
+}
+
+#chat table.channel-list td.channel .inline-channel {
+	color: #61afef;
+	transition: opacity 0.2s;
+}
+
+#chat table.channel-list td.channel .inline-channel:hover,
+#chat table.channel-list td.channel .inline-channel:focus {
+	color: #589DD6;
+	opacity: 0.8;
+}
+
+
 
 
 /* Previews */
@@ -612,15 +702,18 @@ a:focus {
 
 /* Form elements */
 
-#chat-container ::-moz-placeholder {
+#chat-container ::-moz-placeholder,
+::-moz-placeholder {
 	color: rgba(170, 177, 191, 0.6);
 }
 
-#chat-container ::-webkit-input-placeholder {
+#chat-container ::-webkit-input-placeholder,
+::-webkit-input-placeholder {
 	color: rgba(170, 177, 191, 0.6);
 }
 
-#chat-container :-ms-input-placeholder {
+#chat-container :-ms-input-placeholder,
+:-ms-input-placeholder {
 	color: rgba(170, 177, 191, 0.6);
 }
 
@@ -630,6 +723,22 @@ a:focus {
 @media (min-width: 480px) {
 	#chat .from::after {
 		background: linear-gradient(to right, rgba(30, 33, 39, 0.5) 0%, rgba(30, 33, 39, 1) 100%);
+	}
+}
+
+@media (max-width: 480px) {
+	.messages .from .user::before {
+		color: #959ba6;
+		opacity: 0.25;
+		content: "<";
+		font-weight: bold;
+	}
+
+	.messages .from .user::after {
+		color: #959BA6;
+		opacity: 0.25;
+		content: ">";
+		font-weight: bold;
 	}
 }
 
@@ -707,12 +816,13 @@ a:focus {
 #context-menu,
 .textcomplete-menu {
 	background-color: #1a1c21;
+	border-color: #14161a;
 }
 
 .context-menu-item:hover,
 .textcomplete-item:hover,
 .textcomplete-menu .active {
-	background-color: #1e2127;
+	background-color: #21242b;
 	color: #98c739 !important;
 }
 
@@ -724,6 +834,10 @@ a:focus {
 .textcomplete-item,
 .textcomplete-item a {
 	color: #abb2bf;
+}
+
+.context-menu-divider {
+	background-color: #14161A;
 }
 
 
@@ -760,7 +874,7 @@ a:focus {
 	vertical-align: middle;
 }
 
-#sidebar .chan:first-child::before {
+#sidebar .chan.lobby::before {
 	line-height: 24px;
 }
 
@@ -778,4 +892,153 @@ a:focus {
 #sidebar .badge.highlight {
 	background: #98c739;
 	color: #1e2127;
+}
+
+/* Form input colors */
+.input {
+	background-color: #272b33;
+	border-color: #1a1c21;
+	color: #abb2bf;
+}
+
+.input:disabled {
+	background-color: #21242b;
+	/* background with 17% brightness */
+}
+
+.input:not(:disabled):hover,
+.input:not(:disabled):focus {
+	border-color: #14161A;
+}
+
+/* Help page */
+#version-checker {
+	background-color: #1e2127 !important;
+	padding: 0;
+	border-radius: 0;
+	margin-bottom: 32px;
+}
+
+#version-checker::before {
+	margin-left: 0;
+}
+
+#version-checker.up-to-date {
+	color: #98c739;
+}
+
+#version-checker.loading {
+	color: #56b6c2;
+}
+
+#version-checker.loading #check-now {
+	border-color: #56b6c2;
+	color: #56b6c2;
+}
+
+#version-checker.loading #check-now:hover {
+	background-color: #56b6c2;
+	color: #1e2127;
+}
+
+#version-checker.new-version {
+	color: #d19a66;
+}
+
+#version-checker.new-version #check-now {
+	border-color: #d19a66;
+	color: #d19a66;
+}
+
+#version-checker.new-version #check-now:hover {
+	background-color: #d19a66;
+	color: #1e2127;
+}
+
+#version-checker.error {
+	color: #d4666f;
+}
+
+#version-checker.error #check-now {
+	border-color: #d4666f;
+	color: #d4666f;
+}
+
+#version-checker.error #check-now:hover {
+	background-color: #d4666f;
+	color: #1e2127;
+}
+
+#windows .window h2 {
+	border-color: #abb2bf;
+	color: #abb2bf;
+}
+
+/* Monospace formatting */
+code {
+	background-color: #272b33;
+	color: #FA7883;
+}
+
+.irc-monospace {
+	font-family: 'Fira Mono', monospace;
+}
+
+/* Keyboard shortcuts */
+kbd {
+	background-color: #434852;
+	border-color: #30343B;
+	border-bottom-color: #30343B;
+	box-shadow: inset 0 -1px 0 #30343B;
+	color: #abb2bf;
+}
+
+/* Changelog */
+#changelog.window h3 {
+	color: #959BA6;
+	border-bottom-color: #959BA6;
+}
+
+/* Time */
+#chat .time {
+	color: #abb2bf;
+}
+
+/* Sidebar button */
+#sidebar button {
+	color: #98c739;
+}
+
+#sidebar button:hover {
+	color: #1a1c21;
+}
+
+/* Extra help in Settings */
+#settings .extra-help,
+#settings #play {
+	color: #abb2bf;
+}
+
+/* Collapse network icon */
+#sidebar .network .collapse-network-icon::before {
+	color: #abb2bf;
+}
+
+/* Network state */
+#sidebar .not-secure .chan.lobby {
+	color: #B8875A;
+}
+
+#sidebar .not-secure .chan.lobby .lobby-wrap:hover,
+#sidebar .not-secure .chan.lobby.active {
+	color: #d19a66;
+}
+
+#sidebar .not-connected .chan.lobby {
+	color: #d4666f;
+}
+
+#sidebar .not-connected .chan.lobby .lobby-wrap:hover,
+#sidebar .not-connected .chan.lobby.active {
+	color: #FA7883;
 }
