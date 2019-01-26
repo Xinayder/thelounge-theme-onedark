@@ -10,6 +10,26 @@ Author: Alexandre Oliveira
 GitHub: https://github.com/RockyTV
 */
 
+@import 'default.css';
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
+
+:root {
+	--body-color: #abb2bf; /* main text color */
+	--body-color-muted: #C3CBD9; /* secondary text color */
+	--date-marker-color: #98c739; /* date marker, text and separator */
+	--link-color: #61afef; /* links */
+	--button-color: #98c739; /* buttons */
+
+	--unread-marker-color: #d19a66; /* unread marker, text and separator */
+	--highlight-border-color: #d19a66; /* highlighted messages border */
+
+	--status-text-color: #808897; /* status messages */
+
+
+	--body-bg-color: #1a1c21; /* main background */
+	--window-bg-color: #1e2127; /* window background */
+	--highlight-bg-color: #252830; /* highlighted messages background */
+}
 
 /* irc colors
  * 0, white: #fff;
@@ -30,9 +50,9 @@ GitHub: https://github.com/RockyTV
  * 16, light grey: #abb2bf;
  */
 
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:400,700');
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .irc-fg0 {
@@ -183,212 +203,152 @@ body {
 	/* light grey with 85% brightness */
 }
 
-body {
-	background: #1a1c21;
-	color: #abb2bf;
-}
-
-#main,
-#chat .sidebar,
-#windows .chan,
-#windows .window {
-	background: #1e2127;
-}
-
-#windows .window::before {
-	display: none;
-}
-
-#settings,
-#sign-in,
-#connect .title {
-	color: #98c739;
-}
-
-#settings,
-#sign-in,
-#connect .opt {
-	color: #abb2bf;
-}
-
-a:hover,
-a:focus {
-	color: #589DD6;
-	/* blue with 84% brightness */
-}
-
-#settings a,
-#help a,
-#changelog a,
-.btn {
-	color: #98c739;
-}
-
-.btn {
-	border-color: #98c739;
-}
-
-.btn:hover {
-	background: #98c739;
-	color: #434852;
-	/* grey with 32% brightness */
-}
-
-#sidebar {
-	background: #1a1c21;
-}
-
-#settings a:hover,
-#settings a:focus,
-#help a:hover,
-#help a:focus,
-#changelog a:hover,
-#changelog a:focus,
-#sidebar .chan:first-child {
-	color: #84AD32;
-	/* green with 84% brightness */
-}
-
-#sidebar .chan.lobby.active,
-#sidebar .chan.lobby .lobby-wrap:hover {
-	color: #98c739;
-}
-
-#sidebar .chan.lobby.badge {
-	margin-right: 1px;
-}
-
-#sidebar button,
-#sidebar .chan,
-#sidebar .sign-out,
-#sidebar .empty,
-#sidebar .leave::before,
-#sidebar .close::before,
-#sidebar .lobby .add-channel::before,
-#sidebar .network .collapse-network-icon::before {
-	color: #C3CBD9;
-}
-
-#sidebar .chan:hover,
-#sidebar .active {
-	color: #CFD7E6;
-	/* light-grey with 90% brightness */
-	background-color: #21242b;
-	/* background with 13% brightness */
-}
-
-#sidebar button:hover,
-#sidebar .leave::before:hover,
-#sidebar .close::before:hover,
-#sidebar .chan.active .close:hover,
-#sidebar .lobby .add-channel::before:hover,
-#sidebar .network .collapse-network-icon::before:hover {
-	color: #cfd7e6;
-}
-
-#sidebar .close {
-	border-radius: 0;
-}
-
-#sidebar .badge {
-	background-color: #272B33;
-	/* background with 20% brightness */
-	color: #abb2bf;
-}
-
-#sidebar .chan .name::after {
-	background: linear-gradient(to right, rgba(26, 28, 33, 0) 0%, rgba(26, 28, 33, 1) 100%);
-}
-
-#sidebar .chan:hover .name::after,
-#sidebar .chan.active .name::after {
-	background: linear-gradient(to right, rgba(33, 36, 43, 0) 0%, rgba(33, 36, 43 ,1) 100%);
-}
-
-#footer {
-	background: #1A1C21;
-	/* background with 13% brightness */
-	border-top: 1px solid #1a1c21;
-}
-
-/* Footer icon */
-#footer .icon {
-	color: rgba(171, 178, 191, .8);
-}
-
-#footer .icon:hover,
-#footer .icon.active {
-	color: #cfd7e6;
-}
-
-/* User list */
-#chat .count {
-	background-color: #1e2127;
-	color: #abb2bf;
-}
-
-#chat .search {
-	color: #98c739;
-	padding: 15px 16px;
-}
-
-#chat .userlist {
-	background: inherit;
-	border-color: #1a1c21;
-}
-
-#chat .userlist .count::before {
-	color: inherit;
-}
-
-#chat .userlist .count {
-	color: #abb2bf;
-	background-color: inherit;
-}
-
-#chat .userlist .count .search {
-	color: #98c739;
-	background: inherit;
-	border-color: inherit;
-}
-
-#chat .userlist .user.active {
-	background: #1a1c21;
-}
-
-/* Borders */
-
-#chat .from,
-#windows .header,
-#chat .user-mode::before,
+/* Main changes */
 #chat .content,
-#chat .sidebar {
-	border-color: #1a1c21;
+#chat .channel .message.highlight .content {
+	border-left-color: var(--body-bg-color);
 }
 
-
-/* Topic */
-
-#windows .header {
-	background: #1a1c21;
+#chat .channel .message.highlight .time {
+	color: var(--body-color-muted);
 }
 
-#windows .header .title,
-#windows .header .topic {
-	color: #959BA6;
-}
-
-
-/* User list */
-
-#chat .user-mode+.user-mode {
-	padding-top: 1rem;
-}
-
+/* Remove channel roles headings from user list */
 #chat .user-mode::before {
 	display: none;
 }
 
+/* Borders */
+#chat .content,
+#windows #chat .header,
+#chat .user-mode::before,
+#chat .userlist {
+	border-color: var(--body-bg-color);
+}
+
+/* Inputs */
+input,
+.input,
+.input:hover,
+#form,
+#chat .userlist .search {
+	color: var(--body-color);
+	background-color: var(--window-bg-color);
+	border-color: var(--body-bg-color) !important;
+}
+
+/* Form elements */
+
+#chat-container ::-moz-placeholder,
+::-moz-placeholder {
+	color: rgba(170, 177, 191, 0.6);
+}
+
+#chat-container ::-webkit-input-placeholder,
+::-webkit-input-placeholder {
+	color: rgba(170, 177, 191, 0.6);
+}
+
+#chat-container :-ms-input-placeholder,
+:-ms-input-placeholder {
+	color: rgba(170, 177, 191, 0.6);
+}
+
+/* Unread messages count badge */
+#sidebar .badge.highlight {
+	background-color: var(--highlight-border-color);
+	color: var(--body-bg-color);
+}
+
+#sidebar .badge {
+	background-color: var(--highlight-bg-color);
+	color: var(--body-color);
+}
+
+/* Condensed status messages */
+#chat .away .content, 
+#chat .back .content, 
+#chat .condensed .content, 
+#chat .join .content, 
+#chat .kick .content, 
+#chat .mode .content, 
+#chat .nick .content, 
+#chat .part .content, 
+#chat .quit .content, 
+#chat .topic .content, 
+#chat .topic_set_by .content {
+	color: var(--status-text-color);
+}
+
+/* MOTD and code blocks */
+#chat .msg.motd .text {
+	background-color: var(--body-bg-color);
+}
+
+.irc-monospace, code {
+	background-color: var(--body-bg-color);
+	color: var(--status-text-color);
+}
+
+.irc-monospace,
+code,
+#chat .msg.motd .text {
+	font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Footer */
+#footer button {
+	color: var(--body-color);
+}
+
+/* Sidebar/footer on hover */
+#sidebar .chan:hover,
+#footer button:hover {
+	background-color: rgba(37, 40, 48, 0.5); /*highlight bg 50% alpha*/
+	color: var(--body-color-muted);
+}
+
+/* Sidebar active elements */
+#sidebar .active,
+#sidebar .active:hover {
+	background-color: var(--highlight-bg-color);
+	color: var(--body-color-muted);
+}
+
+.context-menu-item:focus,
+.textcomplete-item:focus,
+.context-menu-item:hover,
+.textcomplete-item:hover,
+.textcomplete-menu .active,
+#chat .userlist .user.active {
+	background-color: var(--highlight-bg-color);
+}
+
+/* Context menu */
+#context-menu,
+.textcomplete-menu {
+	background-color: var(--window-bg-color);
+}
+
+.context-menu-item,
+.textcomplete-item {
+	color: var(--body-color);
+}
+
+.context-menu-divider {
+	/*50% body bg color*/
+	color: rgba(26, 28, 33, 0.5);
+}
+
+.context-menu-item:focus,
+.textcomplete-item:focus,
+.context-menu-item:hover,
+.textcomplete-item:hover,
+.textcomplete-menu .active,
+#chat .userlist .user.active {
+	background-color: var(--highlight-bg-color); /*highlight bg 50% alpha*/
+	color: var(--body-color-muted);
+}
 
 /* Nicknames */
 
@@ -522,523 +482,4 @@ a:focus {
 #chat.colored-nicks .user.color-16,
 #chat.colored-nicks .user.color-32 {
 	color: #d19a66;
-}
-
-#chat a {
-	color: #61afef;
-}
-
-
-/* Message form */
-
-#form {
-	background: #1A1C21;
-	border-color: #1A1C21;
-	/* background with 13% brightness */
-	padding-top: 6px;
-}
-
-#windows #form .input {
-	background-color: #1a1c21 !important;
-	border: none;
-	color: #abb2bf !important;
-}
-
-#form #nick {
-	display: none;
-	background: #1A1C21;
-	/* background with 13% brightness */
-	color: #abb2bf;
-}
-
-#form #submit:hover {
-	opacity: 1;
-}
-
-
-/* Buttons */
-
-#chat .show-more-button {
-	background: #1e2127;
-	/* background with 13% brightness */
-	border: 2px solid #98c739;
-	border-radius: 3px;
-	border-color: #98c739;
-	/* background with 13% brightness */
-	color: #98c739;
-	text-transform: uppercase;
-	font-weight: bold;
-}
-
-#chat .show-more-button:hover {
-	/*color: #fff;*/
-	background: #98c739;
-	color: #1e2127;
-}
-
-#chat .show-more-button[disabled=""] {
-	border: none;
-	color: #abb2bf;
-}
-
-#chat .show-more-button[disabled=""]:hover {
-	background: inherit;
-	border: none;
-	color: #abb2bf;
-}
-
-#chat .header {
-	color: #5c6370;
-}
-
-
-/* Notification dot on the top right corner of the menu icon */
-
-#viewport .lt::after {
-	border-color: #1e2127;
-}
-
-#chat .unread-marker::before {
-	border-color: #FA7883;
-	/* red with 98% brightness */
-}
-
-#chat .unread-marker-text::before {
-	background-color: #1e2127;
-	color: #FA7883;
-	/* red with 98% brightness */
-}
-
-#chat .date-marker::before {
-	border-color: #98c739;
-	/* green with 88% brightness */
-}
-
-#chat .date-marker-text::before {
-	background-color: #1e2127;
-	color: #98c739;
-	/* green with 88% brightness */
-}
-
-
-/* Setup text colors */
-
-#chat .msg {
-	color: #abb2bf;
-}
-
-#chat .message {
-	color: #abb2bf;
-}
-
-#chat .self .text,
-#chat .msg.channel_list_loading .text {
-	color: #C3CBD9;
-	/* fg color, brightness to 85% */
-}
-
-#chat .error,
-#chat .error .from,
-#chat .channel .highlight,
-#chat .channel .highlight .from,
-#chat .channel .highlight .text {
-	color: #d7656e;
-}
-
-#chat .unhandled .from {
-	color: #abb2bf;
-}
-
-#chat .msg.quit .time,
-#chat .msg.quit .from button {
-	color: #bc6c9c !important;
-}
-
-#chat .msg.topic {
-	color: #abb2bf;
-}
-
-#chat .msg.join .time,
-#chat .msg.join .from button {
-	color: #56b6c2 !important;
-}
-
-#chat table.channel-list td {
-	color: #abb2bf;
-}
-
-#chat table.channel-list th,
-#chat table.ban-list th,
-#chat table.channel-list td,
-#chat table.ban-list td {
-	border-bottom-color: #1a1c21;
-}
-
-#chat table.channel-list td.channel .inline-channel {
-	color: #61afef;
-	transition: opacity 0.2s;
-}
-
-#chat table.channel-list td.channel .inline-channel:hover,
-#chat table.channel-list td.channel .inline-channel:focus {
-	color: #589DD6;
-	opacity: 0.8;
-}
-
-
-
-
-/* Previews */
-
-#chat .toggle-content {
-	background: #1e2127;
-	color: #abb2bf;
-}
-
-#chat .toggle-content .body {
-	color: #5c6370;
-}
-
-
-/* Form elements */
-
-#chat-container ::-moz-placeholder,
-::-moz-placeholder {
-	color: rgba(170, 177, 191, 0.6);
-}
-
-#chat-container ::-webkit-input-placeholder,
-::-webkit-input-placeholder {
-	color: rgba(170, 177, 191, 0.6);
-}
-
-#chat-container :-ms-input-placeholder,
-:-ms-input-placeholder {
-	color: rgba(170, 177, 191, 0.6);
-}
-
-
-/* End form elements */
-
-@media (min-width: 480px) {
-	#chat .from::after {
-		background: linear-gradient(to right, rgba(30, 33, 39, 0.5) 0%, rgba(30, 33, 39, 1) 100%);
-	}
-}
-
-@media (max-width: 480px) {
-	.messages .from .user::before {
-		color: #959ba6;
-		opacity: 0.25;
-		content: "<";
-		font-weight: bold;
-	}
-
-	.messages .from .user::after {
-		color: #959BA6;
-		opacity: 0.25;
-		content: ">";
-		font-weight: bold;
-	}
-}
-
-
-/* Modifications */
-
-
-/* correct color for icons */
-
-#chat .invite .from::before,
-#chat .topic .from::before,
-#chat .mode .from::before,
-#chat .whois .from::before,
-#chat .nick .from::before,
-#chat .join .from::before {
-	color: #98c739;
-}
-
-#chat .quit .from::before,
-#chat .part .from::before,
-#chat .kick .from::before {
-	color: #E06C75;
-}
-
-
-/* Condensed status messages */
-
-#chat .condensed .content,
-#chat .away .content,
-#chat .back .content,
-#chat .join .content,
-#chat .kick .content,
-#chat .mode .content,
-#chat .nick .content,
-#chat .part .content,
-#chat .quit .content,
-#chat .topic .content,
-#chat .topic_set_by .content {
-	color: #808897;
-}
-
-
-/* Actions */
-
-#chat .action .from,
-#chat .action .text,
-#chat .action .user {
-	color: #B8875A;
-}
-
-
-/* Notices */
-
-#chat .notice .time,
-#chat .notice .text,
-#chat .chan .notice .user {
-	color: #d4666f !important;
-}
-
-#chat .notice .user::before {
-	color: #5c6370;
-	opacity: .3;
-	content: "\2013";
-}
-
-#chat .notice .user::after {
-	color: #5c6370;
-	opacity: .3;
-	content: "\2013";
-}
-
-
-/* Context Menu */
-
-#context-menu,
-.textcomplete-menu {
-	background-color: #1a1c21;
-	border-color: #14161a;
-}
-
-.context-menu-item:hover,
-.textcomplete-item:hover,
-.textcomplete-menu .active {
-	background-color: #21242b;
-	color: #98c739 !important;
-}
-
-.textcomplete-menu .active a {
-	color: #98c739;
-}
-
-.context-menu-item,
-.textcomplete-item,
-.textcomplete-item a {
-	color: #abb2bf;
-}
-
-.context-menu-divider {
-	background-color: #14161A;
-}
-
-
-/* Scrollbar */
-
-::-webkit-scrollbar {
-	background-color: rgba(20, 22, 26, 0);
-}
-
-::-webkit-scrollbar:hover {
-	background-color: rgba(20, 22, 26, 0.3);
-}
-
-::-webkit-scrollbar-thumb:vertical {
-	background: rgba(20, 22, 26, 0.5);
-}
-
-::-webkit-scrollbar-thumb:vertical:active {
-	background: rgba(20, 22, 26, 0.6);
-}
-
-
-/* Font size */
-
-.messages .msg {
-	font-size: 13px;
-}
-
-
-/* Correct alignment for sidebar icons */
-
-#sidebar .chan::before,
-#sidebar .close::before {
-	vertical-align: middle;
-}
-
-#sidebar .chan.lobby::before {
-	line-height: 24px;
-}
-
-
-/* Adjust form input size */
-
-#form #input {
-	min-height: 18px;
-	height: 18px;
-}
-
-
-/* Highlight badge color */
-
-#sidebar .badge.highlight {
-	background: #98c739;
-	color: #1e2127;
-}
-
-/* Form input colors */
-.input {
-	background-color: #272b33;
-	border-color: #1a1c21;
-	color: #abb2bf;
-}
-
-.input:disabled {
-	background-color: #21242b;
-	/* background with 17% brightness */
-}
-
-.input:not(:disabled):hover,
-.input:not(:disabled):focus {
-	border-color: #14161A;
-}
-
-/* Help page */
-#version-checker {
-	background-color: #1e2127 !important;
-	padding: 0;
-	border-radius: 0;
-	margin-bottom: 32px;
-}
-
-#version-checker::before {
-	margin-left: 0;
-}
-
-#version-checker.up-to-date {
-	color: #98c739;
-}
-
-#version-checker.loading {
-	color: #56b6c2;
-}
-
-#version-checker.loading #check-now {
-	border-color: #56b6c2;
-	color: #56b6c2;
-}
-
-#version-checker.loading #check-now:hover {
-	background-color: #56b6c2;
-	color: #1e2127;
-}
-
-#version-checker.new-version {
-	color: #d19a66;
-}
-
-#version-checker.new-version #check-now {
-	border-color: #d19a66;
-	color: #d19a66;
-}
-
-#version-checker.new-version #check-now:hover {
-	background-color: #d19a66;
-	color: #1e2127;
-}
-
-#version-checker.error {
-	color: #d4666f;
-}
-
-#version-checker.error #check-now {
-	border-color: #d4666f;
-	color: #d4666f;
-}
-
-#version-checker.error #check-now:hover {
-	background-color: #d4666f;
-	color: #1e2127;
-}
-
-#windows .window h2 {
-	border-color: #abb2bf;
-	color: #abb2bf;
-}
-
-/* Monospace formatting */
-code {
-	background-color: #272b33;
-	color: #FA7883;
-}
-
-.irc-monospace {
-	font-family: 'Fira Mono', monospace;
-}
-
-/* Keyboard shortcuts */
-kbd {
-	background-color: #434852;
-	border-color: #30343B;
-	border-bottom-color: #30343B;
-	box-shadow: inset 0 -1px 0 #30343B;
-	color: #abb2bf;
-}
-
-/* Changelog */
-#changelog.window h3 {
-	color: #959BA6;
-	border-bottom-color: #959BA6;
-}
-
-/* Time */
-#chat .time {
-	color: #abb2bf;
-}
-
-/* Sidebar button */
-#sidebar button {
-	color: #98c739;
-}
-
-#sidebar button:hover {
-	color: #1a1c21;
-}
-
-/* Extra help in Settings */
-#settings .extra-help,
-#settings #play {
-	color: #abb2bf;
-}
-
-/* Collapse network icon */
-#sidebar .network .collapse-network-icon::before {
-	color: #abb2bf;
-}
-
-/* Network state */
-#sidebar .not-secure .chan.lobby {
-	color: #B8875A;
-}
-
-#sidebar .not-secure .chan.lobby .lobby-wrap:hover,
-#sidebar .not-secure .chan.lobby.active {
-	color: #d19a66;
-}
-
-#sidebar .not-connected .chan.lobby {
-	color: #d4666f;
-}
-
-#sidebar .not-connected .chan.lobby .lobby-wrap:hover,
-#sidebar .not-connected .chan.lobby.active {
-	color: #FA7883;
 }
