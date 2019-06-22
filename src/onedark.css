@@ -333,8 +333,10 @@ code,
 
 .context-menu-item:focus,
 .textcomplete-item:focus,
+.textcomplete-item a:focus,
 .context-menu-item:hover,
 .textcomplete-item:hover,
+.textcomplete-item a:hover,
 .textcomplete-menu .active,
 #chat .userlist .user.active {
 	background-color: var(--highlight-bg-color); /*highlight bg 50% alpha*/
