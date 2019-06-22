@@ -315,15 +315,6 @@ code,
 	color: var(--body-color-muted);
 }
 
-.context-menu-item:focus,
-.textcomplete-item:focus,
-.context-menu-item:hover,
-.textcomplete-item:hover,
-.textcomplete-menu .active,
-#chat .userlist .user.active {
-	background-color: var(--highlight-bg-color);
-}
-
 /* Context menu */
 #context-menu,
 .textcomplete-menu {
