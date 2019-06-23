@@ -323,7 +323,8 @@ code,
 }
 
 .context-menu-item,
-.textcomplete-item {
+.textcomplete-item,
+.textcomplete-item a {
 	color: var(--body-color);
 }
 
