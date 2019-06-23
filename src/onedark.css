@@ -348,7 +348,7 @@ code,
 
 /* Error */
 #chat .error,
-#chat .error .from
+#chat .error .from,
 #chat .part .from::before,
 #chat .quit .from::before {
 	color: var(--error-color);
