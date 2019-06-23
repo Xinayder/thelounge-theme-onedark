@@ -342,7 +342,7 @@ code,
 .textcomplete-menu .active,
 #chat .userlist .user.active {
 	background-color: var(--highlight-bg-color); /*highlight bg 50% alpha*/
-	color: var(--body-color-muted);
+	color: var(--button-color);
 }
 
 /* Nicknames */
