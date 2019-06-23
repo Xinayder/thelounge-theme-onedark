@@ -25,6 +25,8 @@ GitHub: https://github.com/RockyTV
 
 	--status-text-color: #808897; /* status messages */
 
+	--error-color: #e06c75;
+	--green-color: #98c739;
 
 	--body-bg-color: #1a1c21; /* main background */
 	--window-bg-color: #1e2127; /* window background */
@@ -343,6 +345,24 @@ code,
 	background-color: var(--highlight-bg-color); /*highlight bg 50% alpha*/
 	color: var(--button-color);
 }
+
+/* Error */
+#chat .error,
+#chat .error .from
+#chat .part .from::before,
+#chat .quit .from::before {
+	color: var(--error-color);
+}
+
+/* Icons */
+#chat .join .from::before {
+	color: var(--green-color);
+}
+
+#chat .count::before {
+	color: var(--body-color);
+}
+
 
 /* Nicknames */
 
